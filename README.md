@@ -225,3 +225,9 @@ Book deleted.
 **No input length limits** — The app checks that numbers are numbers, but does not check if a title or bio is too long for the database column.
 
 **Rating update not validated in Python** — When updating a rating, the app accepts any float. Entering 11 or -1 will be rejected by the database `CHECK` constraint, but the error shown is a raw MySQL message rather than a friendly one.
+
+## Reflection
+
+I have spent a lot of time on this project and I ahev enjoyed every moment of this. SOme challenging pieces of this poroject were using a docker and making sure the data and schema file imported in correctly. Other parts also include connecting the pythoin program to the docker container.
+
+Some fun parts of the project were creating the functions and customizing the controls of the application. I enjpyed being able to map out what people could do under CRUD and adding a little touch of inspiration for some of teh choices. If i had more time on the project I would have loved to create mopre options or even visuals as well. 
