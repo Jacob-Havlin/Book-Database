@@ -26,7 +26,7 @@ The database uses six tables. `PUBLISHER` connects to `BOOK` in a one-to-many re
 If you are running this for the first time:
 
 ```bash
-docker run --name privilege-lab -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
+docker run --name books -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password -d mysql:latest
 ```
 
 If the container already exists, just start it:

@@ -1,5 +1,5 @@
 -- Data for Book Tracker Database
-
+USE book_tracker
 -- 1. Insert Publishers
 INSERT INTO publisher (name, website, country) VALUES 
 ('Penguin Press', 'https://www.penguin.com', 'USA'),
