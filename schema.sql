@@ -10,6 +10,7 @@ USE book_tracker;
 --  TABLE: publisher
 --  One publisher can release many books (1:M)
 
+DROP TABLE IF EXISTS publisher; 
 CREATE TABLE publisher (
   publisher_id  INT            NOT NULL AUTO_INCREMENT,
   name          VARCHAR(150)   NOT NULL,
@@ -21,6 +22,7 @@ CREATE TABLE publisher (
 --  TABLE: author
 --  Core info and credentials for each author
 
+DROP TABLE IF EXISTS author; 
 CREATE TABLE author (
   author_id          INT           NOT NULL AUTO_INCREMENT,
   first_name         VARCHAR(100)  NOT NULL,
@@ -34,6 +36,7 @@ CREATE TABLE author (
 --  TABLE: category
 --  Applicable use areas: finance, marketing, habits, etc.
 
+DROP TABLE IF EXISTS category; 
 CREATE TABLE category (
   category_id  INT           NOT NULL AUTO_INCREMENT,
   name         VARCHAR(100)  NOT NULL UNIQUE,
@@ -44,6 +47,7 @@ CREATE TABLE category (
 --  TABLE: book
 --  Core book record — links to publisher (FK)
 
+DROP TABLE IF EXISTS book; 
 CREATE TABLE book (
   book_id         INT            NOT NULL AUTO_INCREMENT,
   title           VARCHAR(255)   NOT NULL,
@@ -77,6 +81,7 @@ CREATE TABLE book (
 --  TABLE: book_author  (junction — M:N)
 --  Resolves the many-to-many between book and author
 
+DROP TABLE IF EXISTS book_author; 
 CREATE TABLE book_author (
   book_id    INT  NOT NULL,
   author_id  INT  NOT NULL,
@@ -96,6 +101,7 @@ CREATE TABLE book_author (
 --  TABLE: book_category  (junction — M:N)
 --  Resolves the many-to-many between book and category
 
+DROP TABLE IF EXISTS book_category; 
 CREATE TABLE book_category (
   book_id      INT  NOT NULL,
   category_id  INT  NOT NULL,
